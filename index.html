@@ -1111,9 +1111,19 @@ document.addEventListener('keydown',e=>{
 
 </script>
 <script>
-var _actx;function _ac(){if(!_actx){try{_actx=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}}return _actx;}
+var _actx,_soundOn=true,_bgmTimer=null,_bgmStep=0;var _BGM=[523,659,784,659,587,659,523,440,523,659,784,880,784,659,587,523];function _ac(){if(!_actx){try{_actx=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}}return _actx;}
 function _beep(f,t0,dur,type,vol){var c=_ac();if(!c)return;var o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;o.connect(g);g.connect(c.destination);var t=c.currentTime+t0;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+dur);o.start(t);o.stop(t+dur+0.03);}
-function playSfx(k){try{var c=_ac();if(!c)return;if(c.state==='suspended')c.resume();if(k==='correct'){_beep(784,0,0.13,'triangle',0.3);_beep(1175,0.09,0.2,'triangle',0.26);}else if(k==='wrong'){_beep(190,0,0.26,'sawtooth',0.16);}else if(k==='start'){[523,659,784,1046,1318].forEach(function(f,i){_beep(f,i*0.085,0.26,'triangle',0.26);});}}catch(e){}}
+function playSfx(k){if(!_soundOn)return;try{var c=_ac();if(!c)return;if(c.state==='suspended')c.resume();if(k==='correct'){_beep(784,0,0.13,'triangle',0.3);_beep(1175,0.09,0.2,'triangle',0.26);}else if(k==='wrong'){_beep(190,0,0.26,'sawtooth',0.16);}else if(k==='start'){[523,659,784,1046,1318].forEach(function(f,i){_beep(f,i*0.085,0.26,'triangle',0.26);});}else if(k==='click'){_beep(1320,0,0.05,'triangle',0.12);_beep(1760,0.028,0.06,'triangle',0.09);}}catch(e){}}
+function _bgmTick(){if(!_soundOn)return;var f=_BGM[_bgmStep%_BGM.length];_beep(f,0,0.34,'triangle',0.055);if(_bgmStep%2===0)_beep(f/2,0,0.36,'sine',0.045);_bgmStep++;}
+function startBGM(){var c=_ac();if(!c)return;if(c.state==='suspended')c.resume();if(_bgmTimer||!_soundOn)return;_bgmTick();_bgmTimer=setInterval(_bgmTick,360);}
+function toggleSound(){_soundOn=!_soundOn;var b=document.getElementById('sound-btn');if(b)b.textContent=_soundOn?'🔊':'🔇';if(_soundOn){startBGM();}else if(_bgmTimer){clearInterval(_bgmTimer);_bgmTimer=null;}}
+window.addEventListener('load',function(){
+  var b=document.createElement('button');b.id='sound-btn';b.textContent='🔊';b.title='소리 켜기/끄기';
+  b.style.cssText='position:fixed;top:56px;right:12px;z-index:99999;width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.5);background:rgba(0,0,0,.28);font-size:19px;cursor:pointer;line-height:1;padding:0';
+  b.onclick=function(e){e.stopPropagation();toggleSound();};document.body.appendChild(b);
+  document.addEventListener('pointerdown',function(){startBGM();},{once:true});
+  document.addEventListener('click',function(e){var t=e.target.closest('button,.lcard');if(t&&t.id!=='sound-btn')playSfx('click');},true);
+});
 </script>
 </body>
 </html>
