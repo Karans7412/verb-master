@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="3단변화 마스터">
-<meta name="theme-color" content="#06091a">
+<meta name="theme-color" content="#ffd23f">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>프렙과 함께하는 3단변화 마스터</title>
@@ -14,7 +14,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{height:100%}body{min-height:100%;height:-webkit-fill-available}
-body{background:#06091a;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;overflow-x:hidden}
+body{background:linear-gradient(180deg,#ffe488,#ffd23f 55%,#ffc62b) fixed;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;overflow-x:hidden}
 #starCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
 #app{position:relative;z-index:1;min-height:100vh;max-width:500px;margin:0 auto;padding:18px 18px 48px;display:flex;flex-direction:column}
 .screen{display:none;flex-direction:column;flex:1}
@@ -24,12 +24,12 @@ body{background:#06091a;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;o
 #s-home{align-items:center;justify-content:center;text-align:center;padding:20px 0}
 .home-logo{font-size:62px;display:block;animation:hov 2.5s ease-in-out infinite;margin-bottom:14px;filter:drop-shadow(0 0 20px rgba(160,100,255,.6))}
 @keyframes hov{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
-.home-title{font-size:32px;font-weight:900;color:#f0f8ff;letter-spacing:1px;margin-bottom:4px;text-shadow:0 0 30px rgba(120,180,255,.5)}
-.home-sub{font-size:13px;color:#7799bb;margin-bottom:28px}
+.home-title{font-size:32px;font-weight:900;color:#3a2c06;letter-spacing:1px;margin-bottom:4px;text-shadow:0 2px 0 rgba(255,255,255,.55)}
+.home-sub{font-size:13px;color:#6b5212;margin-bottom:28px}
 .level-cards{display:flex;flex-direction:column;gap:10px;width:100%;margin-bottom:12px}
 .lcard{padding:20px 22px;border-radius:14px;cursor:pointer;transition:all .18s;text-align:left;display:flex;align-items:center;gap:16px;border:2px solid transparent}
 .lcard:hover{transform:translateY(-2px)}
-.lcard-icon{font-size:36px;flex-shrink:0}
+.lcard-icon{font-size:32px;flex-shrink:0;width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 3px 9px rgba(0,0,0,.18);border:2px solid rgba(255,255,255,.6)}
 .lcard-body{flex:1}
 .lcard-name{font-size:20px;font-weight:900;margin-bottom:3px}
 .lcard-desc{font-size:14px;opacity:.85;line-height:1.4}
@@ -88,10 +88,10 @@ body{background:#06091a;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;o
 #s-setup{padding:10px 0}
 .setup-back{display:flex;align-items:center;gap:8px;margin-bottom:20px;cursor:pointer;opacity:.7;transition:opacity .15s}
 .setup-back:hover{opacity:1}
-.setup-back-txt{font-size:13px;font-weight:600;color:#7799bb}
+.setup-back-txt{font-size:13px;font-weight:700;color:#5a4710}
 .setup-level-badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:8px}
-.setup-title{font-size:22px;font-weight:900;color:#f0f8ff;margin-bottom:4px}
-.setup-desc{font-size:13px;color:#6688aa;line-height:1.6;white-space:pre-line}
+.setup-title{font-size:22px;font-weight:900;color:#2e2406;margin-bottom:4px}
+.setup-desc{font-size:13px;color:#6a5414;line-height:1.6;white-space:pre-line}
 .setup-section{margin-bottom:20px}
 .setup-label{font-size:10px;font-weight:700;color:#445566;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
 .setup-row{display:flex;gap:8px;flex-wrap:wrap}
@@ -353,9 +353,9 @@ body{background:#06091a;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;o
   <div class="home-title">3단변화 마스터</div>
   <div class="home-sub">🧱 프렙과 함께하는</div>
   <div class="level-cards">
-    <div class="lcard lv1" onclick="goSetup(1)"><span class="lcard-icon">🧱</span><div class="lcard-body"><div class="lcard-name">초급</div><div class="lcard-desc">4지선다 / 스피드 모드</div></div><span class="lcard-arrow">›</span></div>
-    <div class="lcard lv2" onclick="goSetup(2)"><span class="lcard-icon">⭐</span><div class="lcard-body"><div class="lcard-name">중급</div><div class="lcard-desc">타이핑 + 힌트</div></div><span class="lcard-arrow">›</span></div>
-    <div class="lcard lv3" onclick="goSetup(3)"><span class="lcard-icon">🏆</span><div class="lcard-body"><div class="lcard-name">고급</div><div class="lcard-desc">타이핑 + 타이머</div></div><span class="lcard-arrow">›</span></div>
+    <div class="lcard lv1" onclick="goSetup(1)"><span class="lcard-icon">🐰</span><div class="lcard-body"><div class="lcard-name">쉽게 1단계</div><div class="lcard-desc">쉽게 선택하며 연습하기</div></div><span class="lcard-arrow">›</span></div>
+    <div class="lcard lv2" onclick="goSetup(2)"><span class="lcard-icon">🐶</span><div class="lcard-body"><div class="lcard-name">도전해봐 2단계</div><div class="lcard-desc">직접 스펠을 써봐요</div></div><span class="lcard-arrow">›</span></div>
+    <div class="lcard lv3" onclick="goSetup(3)"><span class="lcard-icon">🐯</span><div class="lcard-body"><div class="lcard-name">드디어 완성 3단계</div><div class="lcard-desc">시간제한 도전! 프렙 고수들</div></div><span class="lcard-arrow">›</span></div>
   </div>
   <button class="tuto-btn" onclick="goTuto()">📖 튜토리얼 보기 — 블럭이의 설명</button>
 </section>
@@ -508,7 +508,7 @@ body{background:#06091a;font-family:'Segoe UI',system-ui,sans-serif;color:#fff;o
 (function(){
   const c=document.getElementById('starCanvas'),ctx=c.getContext('2d');let stars=[];
   function resize(){c.width=innerWidth;c.height=innerHeight;stars=[];for(let i=0;i<140;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.2,o:Math.random()*.5+.1,s:(Math.random()*.25+.05)*(Math.random()<.5?1:-1)})}
-  function draw(){ctx.clearRect(0,0,c.width,c.height);stars.forEach(s=>{s.o+=s.s*.008;if(s.o>.75||s.o<.08)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(160,200,255,${s.o})`;ctx.fill()});requestAnimationFrame(draw)}
+  function draw(){ctx.clearRect(0,0,c.width,c.height);stars.forEach(s=>{s.o+=s.s*.008;if(s.o>.75||s.o<.08)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,255,255,${s.o*0.45})`;ctx.fill()});requestAnimationFrame(draw)}
   addEventListener('resize',resize);resize();draw();
 })();
 
@@ -606,19 +606,19 @@ const RANKS=[
 let vnIdx=0;
 const VN=[
   {char:'c_surprised',name:'???',nc:'#88ccff',nb:'#071830',nbd:'#1e3a5a',bg:'radial-gradient(ellipse at 60% 40%,#0d1a3a,#06091a)',
-   lines:['어...? 여기 어떻게 들어온 거야?','여긴 <b>불규칙 동사 블럭 월드</b>야!','함부로 들어오는 곳이 아닌데... 👀'],planets:false},
+   lines:['앗, 누구예요? 어떻게 들어왔죠? 👀','여기는 <b>불규칙동사 블럭 월드</b>랍니다!','아무나 못 오는 곳인데...'],planets:false},
   {char:'c_book',name:'블럭이',nc:'#88ffaa',nb:'#071a0e',nbd:'#1a4828',bg:'radial-gradient(ellipse at 40% 50%,#0d2010,#06091a)',
-   lines:['아, 미안! 놀래켰지? 😄','나는 <b>블럭이</b>야. 프렙 블럭 탐험대 소속!','','이 블럭 월드엔 <b style="color:#ffdd66">146개의 불규칙 동사</b>가','숨어있어. 같이 찾으러 가볼래?'],planets:false},
+   lines:['앗 깜짝이야, 미안해요! 😄','저는 <b>블럭이</b>예요. 프렙 블럭 친구죠!','','이곳엔 <b style="color:#ffdd66">불규칙동사 146개</b>가','블럭 속에 숨어 있어요. 같이 모아볼래요?'],planets:false},
   {char:'c_magnify',name:'블럭이',nc:'#cc99ff',nb:'#120828',nbd:'#2a1a45',bg:'radial-gradient(ellipse at 50% 30%,#150d28,#06091a)',
-   lines:['문제를 맞힐 때마다','<b style="color:#cc99ff">새로운 단계</b>을 발견해!','','총 <b>5개 단계</b>을 모두 발견하면','진정한 <b style="color:#ffdd66">은하 영웅</b>이 될 수 있어 🌟'],planets:true},
+   lines:['정답을 맞힐 때마다','<b style="color:#cc99ff">다음 단계 블럭</b>이 열려요!','','<b>5단계</b>를 모두 모으면','진짜 <b style="color:#ffdd66">프렙 마스터</b>가 돼요 🌟'],planets:true},
   {char:'c_wink',name:'블럭이',nc:'#88ccff',nb:'#071830',nbd:'#1e3a5a',bg:'radial-gradient(ellipse at 30% 60%,#071830,#06091a)',
-   lines:['<b style="color:#88ccff">🧱 초급</b> 설명할게!'],planets:false,mode:1},
+   lines:['<b style="color:#88ccff">🐰 쉽게 1단계</b>부터 가볼까요?'],planets:false,mode:1},
   {char:'c_note',name:'블럭이',nc:'#cc99ff',nb:'#120828',nbd:'#2a1a45',bg:'radial-gradient(ellipse at 70% 40%,#180828,#06091a)',
-   lines:['<b style="color:#cc99ff">⭐ 중급</b>부터는 직접 쳐야 해!'],planets:false,mode:2},
+   lines:['<b style="color:#cc99ff">🐶 도전해봐 2단계</b>는 직접 입력해요!'],planets:false,mode:2},
   {char:'c_blank',name:'블럭이',nc:'#88ffaa',nb:'#071a0e',nbd:'#1a4828',bg:'radial-gradient(ellipse at 50% 60%,#071a0e,#06091a)',
-   lines:['<b style="color:#88ffaa">🏆 고급</b>은 진짜 어려워...'],planets:false,mode:3},
+   lines:['<b style="color:#88ffaa">🐯 드디어 완성 3단계</b>는 진짜 만만찮아요!'],planets:false,mode:3},
   {char:'c_happy',name:'블럭이',nc:'#ffdd66',nb:'#1a1200',nbd:'#4a3800',bg:'radial-gradient(ellipse at 50% 50%,#1a0808,#06091a)',
-   lines:['틀리면 <b style="color:#ffdd66">❤️ HP</b>가 줄어.','5개 다 없어지면 게임 오버!','','오답이 나오면 <b>정답 팝업</b>이','잠깐 보였다가 자동으로 넘어가.','','자, 이제 탐험 시작할까? 🧱'],planets:false,isLast:true},
+   lines:['틀리면 <b style="color:#ffdd66">❤️ 하트</b>가 하나 줄어요.','하트가 다 없어지면 끝이에요!','','틀린 문제는 <b>정답 카드</b>가','잠깐 떴다가 넘어가요.','','자, 그럼 도전하러 가볼까요? 🧱'],planets:false,isLast:true},
 ];
 
 function goTuto(){
@@ -697,7 +697,7 @@ function showVnSlide(n){
   if(s.mode)appendModeCards(textEl,s.mode);
 
   const nb=document.getElementById('vn-next-btn');
-  if(s.isLast){nb.textContent='탐험 시작! 🧱';nb.className='vn-next end-btn';nb.onclick=endTuto;}
+  if(s.isLast){nb.textContent='도전하러 가기! 🧱';nb.className='vn-next end-btn';nb.onclick=endTuto;}
   else{nb.textContent='다음 ▶';nb.className='vn-next';nb.onclick=nextVnSlide;}
 
   const dotsEl=document.getElementById('vn-dots');dotsEl.innerHTML='';
@@ -711,14 +711,14 @@ document.addEventListener('touchend',e=>{if(!document.getElementById('s-tutorial
 
 /* ── GAME LOGIC ── */
 const LV_INFO={
-  1:{badge:'🧱 초급',bc:'#3399dd',bb:'#071830',bbd:'#1e3a5a',title:'초급 — 단계 탐사',desc:'과거형과 과거분사를 보기에서 골라요.\n스피드 모드에서는 5초 안에 선택해야 해요!',modes:[{key:'choice',label:'🎯 4지선다'},{key:'speed',label:'⚡ 스피드'}],start:'🧱 탐사 시작!'},
-  2:{badge:'⭐ 중급',bc:'#bb88ff',bb:'#160d28',bbd:'#2a1a45',title:'중급 — 단계 탐사',desc:'과거형과 과거분사를 직접 입력해요.\n힌트를 최대 3번 쓸 수 있어요.',modes:[],start:'⭐ 탐사 시작!'},
-  3:{badge:'🏆 고급',bc:'#88dd99',bb:'#0a1a12',bbd:'#1a3828',title:'고급 — 단계 탐사',desc:'힌트 없이 직접 입력해요.\n타이머 모드로 실전 감각을 키울 수 있어요.',modes:[],start:'🏆 탐사 시작!',timer:true},
+  1:{badge:'🐰 쉽게 1단계',bc:'#3399dd',bb:'#071830',bbd:'#1e3a5a',title:'쉽게 1단계 — 도전하기',desc:'과거형과 과거분사를 보기에서 골라요.\n스피드 모드는 제한시간 안에 선택해요!',modes:[{key:'choice',label:'🎯 4지선다'},{key:'speed',label:'⚡ 스피드'}],start:'🐰 도전 시작!'},
+  2:{badge:'🐶 도전해봐 2단계',bc:'#bb88ff',bb:'#160d28',bbd:'#2a1a45',title:'도전해봐 2단계 — 도전하기',desc:'과거형과 과거분사를 직접 입력해요.\n힌트는 언제든 눌러서 볼 수 있어요.',modes:[],start:'🐶 도전 시작!'},
+  3:{badge:'🐯 드디어 완성 3단계',bc:'#88dd99',bb:'#0a1a12',bbd:'#1a3828',title:'드디어 완성 3단계 — 도전하기',desc:'힌트 없이 직접 입력해요.\n타이머로 실전 감각을 키워봐요!',modes:[],start:'🐯 도전 시작!',timer:true},
 };
 let lv=1,gameMode='choice',TOTAL=20,TIMER_SEC=0;
 let queue,idx,hp,stars,streak,bestStreak,answered,wrongList,upgradePending;
 let timerInterval,timeLeft,taInterval,taSelected,normalSelected;
-let hintsLeft=3,hintUsedPast=false,hintUsedPP=false;
+let hintsLeft=9999,hintUsedPast=false,hintUsedPP=false;let speedSec=5;
 let selMode='choice',selQ=20,selTimer=0;
 
 const $=id=>document.getElementById(id);
@@ -750,6 +750,7 @@ function makeChoices4(verb){
   return shuf([correct,...wrongs.slice(0,3)]);
 }
 
+function adjSpeed(d){speedSec=Math.max(2,Math.min(15,speedSec+d));var l=document.getElementById('speed-sec-lbl');if(l)l.textContent=speedSec+'초';}
 function goSetup(level){
   lv=level;const info=LV_INFO[level];
   const badge=$('setup-badge');badge.textContent=info.badge;
@@ -763,6 +764,8 @@ function goSetup(level){
       btn.onclick=()=>{selMode=m.key;document.querySelectorAll('#setup-mode-row .setup-btn').forEach(b=>{b.classList.remove('on','lv1','lv2','lv3');});btn.classList.add('on','lv'+level);};
       row.appendChild(btn);});
   } else {modeSection.style.display='none';selMode='type';}
+  var _sp=document.getElementById('speed-time-ctrl');if(_sp)_sp.remove();
+  if(level===1){var sc=document.createElement('div');sc.id='speed-time-ctrl';sc.style.cssText='margin-top:12px';sc.innerHTML='<div class="setup-label">스피드 제한시간</div><div style="display:flex;gap:10px;align-items:center;justify-content:center"><button class="setup-btn" style="flex:0 0 56px;font-size:18px" onclick="adjSpeed(-1)">－</button><span id="speed-sec-lbl" style="font-size:16px;font-weight:800;color:#88ccff;min-width:54px;text-align:center">'+speedSec+'초</span><button class="setup-btn" style="flex:0 0 56px;font-size:18px" onclick="adjSpeed(1)">＋</button></div>';modeSection.appendChild(sc);modeSection.style.display='block';}
   selQ=20;$('custom-q-wrap').style.display='none';
   const qrow=$('setup-qcount-row');qrow.innerHTML='';
   [10,20,30,'직접입력'].forEach(n=>{
@@ -789,13 +792,13 @@ function goSetup(level){
   showScreen('s-setup');
 }
 
-function startGame(){
+function startGame(){playSfx('start');
   gameMode=selMode;TOTAL=selQ;TIMER_SEC=selTimer;
   queue=shuf([...ALL_VERBS]).slice(0,TOTAL);
   idx=0;hp=5;stars=0;streak=0;bestStreak=0;answered=false;wrongList=[];upgradePending=false;
-  hintsLeft=3;hintUsedPast=false;hintUsedPP=false;
+  hintsLeft=9999;hintUsedPast=false;hintUsedPP=false;
   $('hud').className='hud lv'+lv;$('hud-badge').className='hud-badge lv'+lv;
-  $('hud-badge').textContent=lv===1?'초급':lv===2?'중급':'고급';
+  $('hud-badge').textContent=lv===1?'🐰 1단계':lv===2?'🐶 2단계':'🐯 3단계';
   $('hud-prog-track').className='hud-prog-track lv'+lv;$('hud-prog-fill').className='hud-prog-fill lv'+lv;
   $('hud-score').className='hud-score lv'+lv;$('qcard').className='qcard lv'+lv;
   $('next-btn').className='next-btn lv'+lv;$('confirm-btn').className='confirm-btn lv'+lv;
@@ -909,11 +912,11 @@ function loadSpeed(v){
     });
     grid.appendChild(btn);
   });
-  let t=5;const fill=$('ta-fill'),num=$('ta-num');const circ=201;
+  let t=speedSec;const fill=$('ta-fill'),num=$('ta-num');const circ=201;
   fill.setAttribute('class','ta-ring-fill');num.className='ta-ring-num';
-  fill.style.strokeDashoffset='0';num.textContent='5';
+  fill.style.strokeDashoffset='0';num.textContent=speedSec;
   taInterval=setInterval(()=>{
-    t-=0.05;fill.style.strokeDashoffset=circ*(1-Math.max(t,0)/5);num.textContent=Math.ceil(Math.max(t,0));
+    t-=0.05;fill.style.strokeDashoffset=circ*(1-Math.max(t,0)/speedSec);num.textContent=Math.ceil(Math.max(t,0));
     if(t<=2){fill.setAttribute('class','ta-ring-fill warn');num.className='ta-ring-num warn';}
     if(t<=0){clearInterval(taInterval);if(!answered)speedTimeUp(v);}
   },50);
@@ -923,7 +926,7 @@ function speedTimeUp(v){
   answered=true;const cp=v.p.split('/')[0],cpp=v.pp.split('/')[0];
   Array.from($('ta-choices').children).forEach(b=>{if(b.dataset.past===cp&&b.dataset.pp===cpp)b.className='ta-choice reveal';});
   $('ta-confirm-btn').style.display='none';$('feedback').textContent='시간 초과! ⏱';$('feedback').style.color='#ff8888';
-  hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();
+  playSfx('wrong');hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();
   showWrongPopup(v);
   setTimeout(()=>{$('wrong-overlay').classList.remove('show');if(hp===0){showMC();return;}idx++;loadQ();},1200);
 }
@@ -947,7 +950,7 @@ function loadType(v){
   ip.setAttribute('style','');ipp.setAttribute('style','');
   ip.className='type-input lv'+lv;ipp.className='type-input lv'+lv;
   ip.disabled=false;ipp.disabled=false;$('check-btn').disabled=false;
-  if(lv===2){$('hint-bar').style.display='flex';$('hint-count').textContent='💡 힌트 '+hintsLeft+'개 남음';$('hint-past-btn').disabled=hintsLeft<=0;$('hint-pp-btn').disabled=hintsLeft<=0;$('hint-past-btn').textContent='💡 과거형 힌트';$('hint-pp-btn').textContent='💡 과거분사 힌트';}
+  if(lv===2){$('hint-bar').style.display='flex';$('hint-count').textContent='💡 힌트';$('hint-past-btn').disabled=hintsLeft<=0;$('hint-pp-btn').disabled=hintsLeft<=0;$('hint-past-btn').textContent='💡 과거형 힌트';$('hint-pp-btn').textContent='💡 과거분사 힌트';}
   else $('hint-bar').style.display='none';
   if(lv===3&&TIMER_SEC>0)startBigTimer(v);else $('big-timer').style.display='none';
   setTimeout(()=>{
@@ -964,7 +967,7 @@ function loadType(v){
 
 function showHint(type){
   if(hintsLeft<=0||answered)return;const v=queue[idx];hintsLeft--;
-  $('hint-count').textContent='💡 힌트 '+hintsLeft+'개 남음';
+  $('hint-count').textContent='💡 힌트';
   if(type==='past'){hintUsedPast=true;$('hint-past-btn').disabled=true;$('hint-past-btn').textContent='✓ '+v.p.split('/')[0];$('inp-past').placeholder=v.p.split('/')[0];}
   else{hintUsedPP=true;$('hint-pp-btn').disabled=true;$('hint-pp-btn').textContent='✓ '+v.pp.split('/')[0];$('inp-pp').placeholder=v.pp.split('/')[0];}
   $('hint-past-btn').disabled=hintsLeft<=0||hintUsedPast;$('hint-pp-btn').disabled=hintsLeft<=0||hintUsedPP;
@@ -979,12 +982,12 @@ function checkType(){
   setS($('inp-past'),pOk);setS($('inp-pp'),ppOk);
   const hintUsed=hintUsedPast||hintUsedPP;const earned=ok?(hintUsed?0.5:1):0;
   if(ok){
-    stars+=earned;streak++;if(streak>bestStreak)bestStreak=streak;
+    playSfx('correct');stars+=earned;streak++;if(streak>bestStreak)bestStreak=streak;
     $('feedback').textContent=hintUsed?'힌트 사용 — 0.5점 💡':rnd(['정답! 🎯','완벽해요! ✨','정확해요! 💫']);
     $('feedback').style.color=hintUsed?'#ffaa44':'#44ddaa';
     renderHUD();renderPlanets();checkUpgrade(earned);setTimeout(()=>nextQ(),600);
   } else {
-    hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();
+    playSfx('wrong');hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();
     showWrongPopup(v);
     setTimeout(()=>{$('wrong-overlay').classList.remove('show');if(hp===0){showMC();return;}idx++;loadQ();},1200);
   }
@@ -1003,15 +1006,15 @@ function startBigTimer(v){
 
 function bigTimerExpire(v){
   if(answered)return;answered=true;$('check-btn').disabled=true;$('inp-past').disabled=true;$('inp-pp').disabled=true;
-  hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();showWrongPopup(v);
+  playSfx('wrong');hp=Math.max(0,hp-1);wrongList.push(v);streak=0;renderHUD();showWrongPopup(v);
   setTimeout(()=>{$('wrong-overlay').classList.remove('show');if(hp===0){showMC();return;}idx++;loadQ();},1200);
 }
 
 function processResult(ok,v){
   answered=true;
   if(ok){
-    stars++;streak++;if(streak>bestStreak)bestStreak=streak;
-    $('feedback').textContent=rnd(['정답! 🎯','완벽해요! ✨','레이저 명중! 💥','은하계 최강! 🌟']);
+    playSfx('correct');stars++;streak++;if(streak>bestStreak)bestStreak=streak;
+    $('feedback').textContent=rnd(['정답! 🎯','완벽해요! ✨','블럭 명중! 🧱','최고예요! 🌟']);
     $('feedback').style.color='#44ddaa';
     renderHUD();renderPlanets();checkUpgrade(1);setTimeout(()=>nextQ(),600);
   } else {
@@ -1106,6 +1109,11 @@ document.addEventListener('keydown',e=>{
   const nb=$('next-btn');if(nb.style.display!=='none'&&answered){nb.click();return;}
 });
 
+</script>
+<script>
+var _actx;function _ac(){if(!_actx){try{_actx=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}}return _actx;}
+function _beep(f,t0,dur,type,vol){var c=_ac();if(!c)return;var o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;o.connect(g);g.connect(c.destination);var t=c.currentTime+t0;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+dur);o.start(t);o.stop(t+dur+0.03);}
+function playSfx(k){try{var c=_ac();if(!c)return;if(c.state==='suspended')c.resume();if(k==='correct'){_beep(784,0,0.13,'triangle',0.3);_beep(1175,0.09,0.2,'triangle',0.26);}else if(k==='wrong'){_beep(190,0,0.26,'sawtooth',0.16);}else if(k==='start'){[523,659,784,1046,1318].forEach(function(f,i){_beep(f,i*0.085,0.26,'triangle',0.26);});}}catch(e){}}
 </script>
 </body>
 </html>
